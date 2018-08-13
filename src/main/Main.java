@@ -10,8 +10,15 @@ public class Main {
     private double b = -0.3;
     private double c = 4.0;
     public static void main(String[] args) {
+        new Main().run();
 
     }
+
+    private void run() {
+        double[] x = fillX(0, 2, 0.002);
+        double[] y = fillY(x);
+    }
+
     public double f(double x){
         if (x< 1.4-EPS){
             return a*x*x+b*x+c;
